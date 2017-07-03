@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  dates: 2017-07-03 11:43:14
+  event_paid: false
+  hotel_reserved: false
+  flight_paid: false
+
+two:
+  location: MyString
+  dates: 2017-07-03 11:43:14
+  event_paid: false
+  hotel_reserved: false
+  flight_paid: false
