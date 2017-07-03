@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170703212807) do
+ActiveRecord::Schema.define(version: 20170703223021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20170703212807) do
     t.string   "type"
     t.boolean  "finals",     default: false
     t.integer  "placement"
+    t.integer  "trip_id"
+    t.index ["trip_id"], name: "index_competitions_on_trip_id", using: :btree
   end
 
   create_table "travelers", force: :cascade do |t|
@@ -39,6 +41,10 @@ ActiveRecord::Schema.define(version: 20170703212807) do
     t.boolean  "flight_paid"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.text     "details"
+    t.integer  "traveler_id"
+    t.string   "event_name"
+    t.index ["traveler_id"], name: "index_trips_on_traveler_id", using: :btree
   end
 
 end
