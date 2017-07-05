@@ -21,6 +21,6 @@ class CompetitionsController < ApplicationController
 
   private
   def competition_params
-    params.require(:competition).permit(:level, :type, :finals, :placement, :trip_id)
+    params.require(:competition).permit(:level, :comp_type, :finals, :placement, :trip_id)
   end
 end

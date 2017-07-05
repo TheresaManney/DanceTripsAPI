@@ -1,7 +1,5 @@
 require "test_helper"
 
 describe CompetitionsController do
-  # it "must be a real test" do
-  #   flunk "Need real tests"
-  # end
+  KEYS = %w(id level comp_type finals placement trip_id)
 end

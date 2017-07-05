@@ -3,5 +3,5 @@ class Competition < ApplicationRecord
 
   validates :trip_id, presence: true
   validates :level, presence: true
-  # validates :type, presence: true
+  validates :comp_type, presence: true
 end
