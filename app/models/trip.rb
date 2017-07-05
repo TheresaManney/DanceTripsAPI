@@ -4,6 +4,7 @@ class Trip < ApplicationRecord
 
   validates :traveler_id, presence: true
   validates :location, presence: true
-  validates :dates, presence: true
+  validates :start_date, presence: true
+  validates :end_date, presence: true
 
 end

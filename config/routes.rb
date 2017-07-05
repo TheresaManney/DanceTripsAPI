@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get 'travelers/index'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "/trips", to: "trips#index", as: "trips"
+
+  get "/trips/:id", to: "trips#show", as: "trip"
+
+  # test to see if I could get all traveler info
+  # get "/travelers", to: "travelers#index", as: "travelers"
 end
