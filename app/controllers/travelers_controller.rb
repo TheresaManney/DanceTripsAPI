@@ -24,6 +24,7 @@ class TravelersController < ApplicationController
 
   private
   # allowed info to prevent bad data
+
   def traveler_params
     params.require(:traveler).permit(:name, :email)
   end

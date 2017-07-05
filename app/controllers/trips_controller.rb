@@ -32,6 +32,7 @@ class TripsController < ApplicationController
 
   private
   def trip_params
+    puts "**************"
     params.require(:trip).permit(:location, :start_date, :end_date, :event_paid, :hotel_reserved, :flight_paid, :details, :traveler_id, :event_name)
   end
 end
