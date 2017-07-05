@@ -2,6 +2,7 @@ class TripsController < ApplicationController
   def index
     # return all of the trips for specific user
     trips = Trip.all
+
     if trips.length > 1
       render json: trips.as_json(except: [:updated_at, :created_at]), status: :ok
     else
@@ -21,7 +22,7 @@ class TripsController < ApplicationController
 
   def create
     trip = Trip.new(trip_params)
-
+    puts "#{trip}"
     if trip.save
       render status: :ok, json: { location: trip.location }
     else
