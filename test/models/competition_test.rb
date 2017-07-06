@@ -2,10 +2,12 @@ require "test_helper"
 
 describe Competition do
   let(:new_competition) { Competition.new }
+  let(:competition) { Competition.new(trip_id: trips(:trip_one).id, level: "Invitational", comp_type: "Social", finals: true, placement: 3)}
 
   describe "Competition relationships" do
-    it "competitions belong to a trip" do
-      skip
+    it "Competition has the correct trip" do
+      competition.must_respond_to :trip
+      competition.trip.must_be_kind_of Trip
     end
   end
 
