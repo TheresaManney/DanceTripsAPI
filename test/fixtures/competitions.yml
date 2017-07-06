@@ -1,33 +1,33 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 comp_one:
-  trip_id: trip_one
+  trip: trip_one
   level: Invitational
   comp_type: Social
   finals: true
   placement: 3
 
 comp_two:
-  trip_id: trip_three
+  trip: trip_three
   level: Amateur
   comp_type: Strictly
   finals: false
 
 comp_three:
-  trip_id: trip_one
+  trip: trip_one
   level: Invitational
   comp_type: Social
   finals: true
   placement: 3
 
 comp_four:
-  trip_id: trip_two
+  trip: trip_two
   level: All Star
   comp_type: Solo
   finals: false
 
 comp_five:
-  trip_id: trip_four
+  trip: trip_four
   level: Advanced
   comp_type: Stricktly
   finals: true

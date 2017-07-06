@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 trip_one:
-  traveler_id: traveler_one
+  traveler: traveler_one
   location: Seattle
   event_name: name
   details: "So fun"
@@ -12,7 +12,7 @@ trip_one:
   flight_paid: false
 
 trip_two:
-  traveler_id: traveler_four
+  traveler: traveler_four
   location: Denver
   event_name: Dance Camp
   start_date: 2017-07-06 11:43:14
@@ -22,7 +22,7 @@ trip_two:
   flight_paid: true
 
 trip_three:
-  traveler_id: traveler_four
+  traveler: traveler_four
   location: New York
   details: "No fun"
   start_date: 2017-03-03 11:43:14
@@ -32,7 +32,7 @@ trip_three:
   flight_paid: false
 
 trip_four:
-  traveler_id: traveler_three
+  traveler: traveler_three
   location: London
   event_name: name
   details: "So fun"
@@ -43,7 +43,7 @@ trip_four:
   flight_paid: true
 
 trip_five:
-  traveler_id: traveler_five
+  traveler: traveler_five
   location: Sweden
   start_date: 2017-07-15 11:43:14
   end_date: 2017-07-23 11:43:14
