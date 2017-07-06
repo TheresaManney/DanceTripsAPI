@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe TravelersController do
-  TRAVELER_KEYS = %w(id name email)
+  TRAVELER_KEYS = %w(id first_name last_name email password_digest)
 
   describe "index" do
     it "is a real working route" do

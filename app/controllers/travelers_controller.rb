@@ -15,7 +15,7 @@ class TravelersController < ApplicationController
     traveler = Traveler.new(traveler_params)
 
     if traveler.save
-      render status: :ok, json: {name: traveler.name}
+      render status: :ok, json: {first_name: traveler.first_name}
     else
       render status: :bad_request, json: { errors: traveler.errors.messages }
 
@@ -24,9 +24,8 @@ class TravelersController < ApplicationController
 
   private
   # allowed info to prevent bad data
-
   def traveler_params
-    params.require(:traveler).permit(:name, :email)
+    params.require(:traveler).permit(:first_name, :last_name, :email)
   end
 
 end

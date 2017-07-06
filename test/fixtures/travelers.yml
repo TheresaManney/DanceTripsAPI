@@ -1,21 +1,26 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 traveler_one:
-  name: Ada
+  first_name: Ada
+  last_name: Lovelace
   email: ada@lovelace.org
 
 traveler_two:
-  name: Theresa
+  first_name: Theresa
+  last_name: Noname
   email: theresa@yo.com
 
 traveler_three:
-  name: Bob
+  first_name: Bob
+  last_name: Boy
   email: bob@gmail.com
 
 traveler_four:
-  name: Vaycay
+  first_name: Vaycay
+  last_name: Yay
   email: vaycay@cool.com
 
 traveler_five:
-  name: Brickwall
+  first_name: Brickwall
+  last_name: Waterfall
   email: brickwall@unique.new
