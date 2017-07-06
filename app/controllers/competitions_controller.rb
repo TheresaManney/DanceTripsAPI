@@ -2,10 +2,20 @@ class CompetitionsController < ApplicationController
   def index
     competitions = Competition.all
 
-    if competitions.length > 1
+    if competitions.length >= 1
       render json: competitions.as_json(except: [:updated_at, :created_at]), status: :ok
     else
       render json: { no_competitions: "Competitions were not found" }, status: :not_found
+    end
+  end
+
+  def show
+    competition = Competition.find_by(id: params[:id])
+    # raise
+    if competition
+      render json: competition.as_json(except: [:created_at, :updated_at]), status: :ok
+    else
+      render json: { errors: { id: ["Competition '#{params[:id]}' not found"] } }, status: :not_found
     end
   end
 

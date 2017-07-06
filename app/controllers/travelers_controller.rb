@@ -4,7 +4,7 @@ class TravelersController < ApplicationController
   def index
     # return all of the travelers
     travelers = Traveler.all
-    if travelers.length > 1
+    if travelers.length >= 1
       render json: travelers.as_json(except: [:updated_at, :created_at]), status: :ok
     else
       render json: { no_travelers: "Travelers were not found" }, status: :not_found

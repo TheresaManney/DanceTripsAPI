@@ -1,9 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  email: MyString
+traveler_one:
+  name: Ada
+  email: ada@lovelace.org
 
-two:
-  name: MyString
-  email: MyString
+traveler_two:
+  name: Theresa
+  email: theresa@yo.com
+
+traveler_three:
+  name: Bob
+  email: bob@gmail.com
+
+traveler_four:
+  name: Vaycay
+  email: vaycay@cool.com
+
+traveler_five:
+  name: Brickwall
+  email: brickwall@unique.new

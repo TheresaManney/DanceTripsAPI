@@ -1,17 +1,41 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  location: MyString
+trip_one:
+  location: Seattle
   start_date: 2017-07-03 11:43:14
   end_date: 2017-07-05 11:43:14
   event_paid: false
   hotel_reserved: false
   flight_paid: false
 
-two:
-  location: MyString
+trip_two:
+  location: Denver
   start_date: 2017-07-06 11:43:14
   end_date: 2017-07-09 11:43:14
+  event_paid: true
+  hotel_reserved: true
+  flight_paid: true
+
+trip_three:
+  location: New York
+  start_date: 2017-03-03 11:43:14
+  end_date: 2017-03-10 11:43:14
+  event_paid: false
+  hotel_reserved: true
+  flight_paid: false
+
+trip_four:
+  location: London
+  start_date: 2017-01-03 11:43:14
+  end_date: 2017-02-05 11:43:14
   event_paid: false
   hotel_reserved: false
+  flight_paid: true
+
+trip_five:
+  location: Sweden
+  start_date: 2017-07-15 11:43:14
+  end_date: 2017-07-23 11:43:14
+  event_paid: true
+  hotel_reserved: true
   flight_paid: false

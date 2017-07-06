@@ -3,7 +3,7 @@ class TripsController < ApplicationController
     # return all of the trips for specific user
     trips = Trip.all
 
-    if trips.length > 1
+    if trips.length >= 1
       render json: trips.as_json(except: [:updated_at, :created_at]), status: :ok
     else
       render json: { no_trips: "Trips were not found" }, status: :not_found
@@ -14,7 +14,7 @@ class TripsController < ApplicationController
   def show
     trip = Trip.find_by(id: params[:id])
     if trip
-      render json: movie.as_json(except: [:created_at, :updated_at]), status: :ok
+      render json: trip.as_json(except: [:created_at, :updated_at]), status: :ok
     else
       render json: { errors: {id: ["Trip id '#{params[:id]}' not found"]} }, status: :not_found
     end
@@ -32,7 +32,6 @@ class TripsController < ApplicationController
 
   private
   def trip_params
-    puts "**************"
     params.require(:trip).permit(:location, :start_date, :end_date, :event_paid, :hotel_reserved, :flight_paid, :details, :traveler_id, :event_name)
   end
 end
