@@ -30,8 +30,18 @@ describe Trip do
   end
 
   describe "Trip validations" do
-  end
+    it "Trip must have a traveler_id, location, start_date, and end_date" do
+      trip = trips(:trip_three)
+      trip.valid?.must_equal true
+    end
 
+    REQUIRED_FIELDS.each do |field|
+      it "Trip is not valid when #{field} is not present" do
+        new_trip.valid?.must_equal false
+        new_trip.errors.messages.must_include field.to_sym
+      end
+    end
+  end
 end
 
 # validates :traveler_id, presence: true
