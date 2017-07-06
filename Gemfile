@@ -45,6 +45,8 @@ group :development do
   gem 'pry-rails'
 end
 
+gem 'simplecov', :require => false, :group => :test
+
 gem 'awesome_print'
 gem 'foundation-rails'
 group :test do
