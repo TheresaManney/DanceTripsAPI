@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe CompetitionsController do
-  KEYS = %w(id level comp_type finals placement trip_id)
+  COMP_KEYS = %w(id level comp_type finals placement trip_id)
 
   describe "index" do
     it "is a real working route" do
@@ -31,7 +31,7 @@ describe CompetitionsController do
       get competitions_url
       body = JSON.parse(response.body)
       body.each do |competition|
-        competition.keys.sort.must_equal KEYS.sort
+        competition.keys.sort.must_equal COMP_KEYS.sort
       end
     end
 
@@ -50,7 +50,7 @@ describe CompetitionsController do
       must_respond_with :success
       body = JSON.parse(response.body)
       body.must_be_instance_of Hash
-      body.keys.sort.must_equal KEYS.sort
+      body.keys.sort.must_equal COMP_KEYS.sort
     end
 
     it "responds correctly when the competition is not found" do
@@ -67,7 +67,7 @@ describe CompetitionsController do
       get competition_path(competitions(:comp_one).id)
       body = JSON.parse(response.body)
 
-      KEYS.each do |key|
+      COMP_KEYS.each do |key|
         body[key].must_equal competitions(:comp_one)[key]
       end
     end
