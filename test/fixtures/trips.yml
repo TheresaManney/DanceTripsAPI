@@ -2,14 +2,16 @@
 
 one:
   location: MyString
-  dates: 2017-07-03 11:43:14
+  start_date: 2017-07-03 11:43:14
+  end_date: 2017-07-05 11:43:14
   event_paid: false
   hotel_reserved: false
   flight_paid: false
 
 two:
   location: MyString
-  dates: 2017-07-03 11:43:14
+  start_date: 2017-07-06 11:43:14
+  end_date: 2017-07-09 11:43:14
   event_paid: false
   hotel_reserved: false
   flight_paid: false
