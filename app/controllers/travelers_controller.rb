@@ -1,4 +1,15 @@
 class TravelersController < ApplicationController
+  before_action :authenticate_traveler
+  # NOTE: (FOR AUTHENTICATING TRAVELER)
+  # You can access the current traveler in your controller with current_user.
+  # You also have access directly to current_traveler which will try to authenticate or return nil:
+    #   def index
+    #     if current_user
+    #       # do something
+    #     else
+    #       # do something else
+    #     end
+    #   end
 
   # this was a test
   def index

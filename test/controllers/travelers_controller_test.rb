@@ -2,6 +2,19 @@ require "test_helper"
 
 describe TravelersController do
   TRAVELER_KEYS = %w(id first_name last_name email password_digest)
+  # def authenticated_header
+  # token = Knock::AuthToken.new(payload: { sub: users(:one).id }).token
+  #
+  # {
+  #   'Authorization': "Bearer #{token}"
+  # }
+  # end
+
+it 'responds successfully' do
+  get secured_resources_url, headers: authenticated_header
+
+  assert_response :success
+end
 
   describe "index" do
     it "is a real working route" do

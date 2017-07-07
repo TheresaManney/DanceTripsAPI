@@ -1,0 +1,67 @@
+[
+  {
+    "trip_id": 1,
+    "level": "Amateur",
+    "comp_type": "Strictly",
+    "finals": true,
+    "placement": 3
+  },
+  {
+    "trip_id": 2,
+    "level": "Open",
+    "comp_type": "Social",
+    "finals": false
+  },
+  {
+    "trip_id": 4,
+    "level": "All Star",
+    "comp_type": "Mix&Match",
+    "finals": true,
+    "placement": 2
+  },
+  {
+    "trip_id": 1,
+    "level": "Amateur",
+    "comp_type": "Social",
+    "finals": true,
+    "placement": 1
+  },
+  {
+    "trip_id": 4,
+    "level": "Open",
+    "comp_type": "Strictly",
+    "finals": false
+  },
+  {
+    "trip_id": 1,
+    "level": "Advanced",
+    "comp_type": "Solo",
+    "finals": true,
+    "placement": 2
+  },
+  {
+    "trip_id": 5,
+    "level": "Amateur",
+    "comp_type": "Social",
+    "finals": true,
+    "placement": 1
+  },
+  {
+    "trip_id": 3,
+    "level": "All Star",
+    "comp_type": "Social",
+    "finals": true
+  },
+  {
+    "trip_id": 2,
+    "level": "Advanced",
+    "comp_type": "Solo",
+    "finals": true
+  },
+  {
+    "trip_id": 1,
+    "level": "Amateur",
+    "comp_type": "Solo",
+    "finals": false
+  }
+]

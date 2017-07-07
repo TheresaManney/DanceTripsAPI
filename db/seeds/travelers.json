@@ -1,1 +1,37 @@
-
+[
+  {
+    "first_name": "Ada",
+    "last_name": "Lovelace",
+    "email": "ada@lovelace.org",
+    "password": "hello-world",
+    "password_confirmation": "hello-world"
+  },
+  {
+    "first_name": "Theresa",
+    "last_name": "Manney",
+    "email": "theresa@m.com",
+    "password": "mypass321",
+    "password_confirmation": "mypass321"
+  },
+  {
+    "first_name": "Bugs",
+    "last_name": "Bunny",
+    "email": "bugs@bunny.com",
+    "password": "bugs123",
+    "password_confirmation": "bugs123"
+  },
+  {
+    "first_name": "Daffy",
+    "last_name": "Duck",
+    "email": "daffy@duck.net",
+    "password": "daffy123",
+    "password_confirmation": "daffy123"
+  },
+  {
+    "first_name": "Sylvester",
+    "last_name": "Cat",
+    "email": "sylvester@cat.org",
+    "password": "sylvester123",
+    "password_confirmation": "sylvester123"
+  }
+]

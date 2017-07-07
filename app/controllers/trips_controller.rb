@@ -1,6 +1,8 @@
 class TripsController < ApplicationController
+  # before_action :authenticate_traveler
   def index
-    # return all of the trips for specific user
+    # return all of the trips for specific traveler
+    # traveler = Traveler.find_by[params: email]
     trips = Trip.all
 
     if trips.length >= 1

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   post 'traveler_token' => 'traveler_token#create'
-  
+
   resources :trips, only: [:index, :show, :create]
 
   resources :competitions, only: [:index, :show, :create]
@@ -10,3 +10,16 @@ Rails.application.routes.draw do
   resources :travelers, only: [:index, :create]
 
 end
+
+# Need to nest routes
+# travelers
+  # trips
+
+# trips
+  # competitions
+
+# OR you might have to do this:
+
+# travelers
+  # trips
+    # competitions

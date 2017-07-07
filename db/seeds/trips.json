@@ -1,0 +1,222 @@
+[
+  {
+    "traveler_id": 1,
+    "location": "Seattle",
+    "start_date": "2017-05-11 11:43:14",
+    "end_date": "2017-05-14 11:43:14",
+    "event_name": "Camp Jitterbug",
+    "details": "",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 2,
+    "location": "Los Angeles",
+    "start_date": "2017-09-01 11:43:14",
+    "end_date": "2017-09-04 11:43:14",
+    "event_name": "Camp Hollywood",
+    "details": "So fun",
+    "event_paid": false,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 4,
+    "location": "New York",
+    "start_date": "2013-05-01 11:43:14",
+    "end_date": "2013-05-13 11:43:14",
+    "event_name": "",
+    "details": "",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 1,
+    "location": "London",
+    "start_date": "2015-09-11 11:43:14",
+    "end_date": "2015-09-14 11:43:14",
+    "event_name": "Event?",
+    "details": "",
+    "event_paid": true,
+    "hotel_reserved": false,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 1,
+    "location": "Alaska",
+    "start_date": "2016-12-11 11:43:14",
+    "end_date": "2016-12-14 11:43:14",
+    "event_name": "Event?",
+    "details": "burrrr!",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 2,
+    "location": "Los Angeles",
+    "start_date": "2016-09-01 11:43:14",
+    "end_date": "2016-09-04 11:43:14",
+    "event_name": "Camp Hollywood",
+    "details": "So fun",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 5,
+    "location": "Portland",
+    "start_date": "2015-07-01 11:43:14",
+    "end_date": "2015-07-04 11:43:14",
+    "event_name": "Portland Lindy Exchange",
+    "details": "",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 4,
+    "location": "Salt Lake City",
+    "start_date": "2018-02-01 11:43:14",
+    "end_date": "2018-02-04 11:43:14",
+    "event_name": "Salt Lake Lindy Con",
+    "details": "",
+    "event_paid": false,
+    "hotel_reserved": false,
+    "flight_paid": false
+  },
+  {
+    "traveler_id": 3,
+    "location": "Portland",
+    "start_date": "2015-07-01 11:43:14",
+    "end_date": "2015-07-04 11:43:14",
+    "event_name": "Portland Lindy Exchange",
+    "details": "",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 2,
+    "location": "Los Angeles",
+    "start_date": "2015-09-01 11:43:14",
+    "end_date": "2015-09-04 11:43:14",
+    "event_name": "Camp Hollywood",
+    "details": "So fun",
+    "event_paid": false,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 1,
+    "location": "Kalispell",
+    "start_date": "2017-06-11 11:43:14",
+    "end_date": "2015-06-14 11:43:14",
+    "event_name": "Big Sky Weekend",
+    "details": "best event hands down",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 2,
+    "location": "Los Angeles",
+    "start_date": "2014-09-01 11:43:14",
+    "end_date": "2014-09-04 11:43:14",
+    "event_name": "Camp Hollywood",
+    "details": "So fun",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 2,
+    "location": "Los Angeles",
+    "start_date": "2013-09-01 11:43:14",
+    "end_date": "2013-09-04 11:43:14",
+    "event_name": "Camp Hollywood",
+    "details": "",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 3,
+    "location": "Iceland",
+    "start_date": "2018-08-01 11:43:14",
+    "end_date": "2018-08-04 11:43:14",
+    "event_name": "Arctic Lindy Exchange",
+    "details": "",
+    "event_paid": false,
+    "hotel_reserved": false,
+    "flight_paid": false
+  },
+  {
+    "traveler_id": 5,
+    "location": "Orange County",
+    "start_date": "2018-04-01 11:43:14",
+    "end_date": "2018-04-04 11:43:14",
+    "event_name": "Inspiration Weekend",
+    "details": "",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 5,
+    "location": "Olympia",
+    "start_date": "2015-07-01 11:43:14",
+    "end_date": "2015-07-04 11:43:14",
+    "event_name": "",
+    "details": "",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 4,
+    "location": "Salt Lake City",
+    "start_date": "2015-01-01 11:43:14",
+    "end_date": "2015-01-04 11:43:14",
+    "event_name": "Salt Lake Lindy Con",
+    "details": "",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 3,
+    "location": "San Francisco",
+    "start_date": "2015-09-11 11:43:14",
+    "end_date": "2015-09-14 11:43:14",
+    "event_name": "Fog City Stomp",
+    "details": "",
+    "event_paid": true,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 4,
+    "location": "Mexico City",
+    "start_date": "2018-05-01 11:43:14",
+    "end_date": "2018-05-13 11:43:14",
+    "event_name": "",
+    "details": "",
+    "event_paid": false,
+    "hotel_reserved": true,
+    "flight_paid": true
+  },
+  {
+    "traveler_id": 5,
+    "location": "Tulsa",
+    "start_date": "2018-07-01 11:43:14",
+    "end_date": "2018-07-04 11:43:14",
+    "event_name": "Tulsa Exchange",
+    "details": "",
+    "event_paid": true,
+    "hotel_reserved": false,
+    "flight_paid": true
+  }
+]
