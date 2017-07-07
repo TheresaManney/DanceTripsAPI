@@ -1,4 +1,8 @@
+require 'bcrypt'
+
 class Traveler < ApplicationRecord
+  has_secure_password
+  
   has_many :trips
 
   validates :first_name, presence: true

@@ -45,6 +45,10 @@ group :development do
   gem 'pry-rails'
 end
 
+gem 'bcrypt'
+
+gem 'knock'
+
 gem 'simplecov', :require => false, :group => :test
 
 gem 'awesome_print'
