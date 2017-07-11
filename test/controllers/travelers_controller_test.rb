@@ -10,11 +10,11 @@ describe TravelersController do
   # }
   # end
 
-it 'responds successfully' do
-  get secured_resources_url, headers: authenticated_header
-
-  assert_response :success
-end
+# it 'responds successfully' do
+#   get secured_resources_url, headers: authenticated_header
+#
+#   assert_response :success
+# end
 
   describe "index" do
     it "is a real working route" do
