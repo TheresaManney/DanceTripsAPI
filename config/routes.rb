@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+  # This did not work...
+  # Mounting Knock Engine exposes the following endpoint for authentication:
+  # http://localhost:3000/knock/auth_token
+  # mount Knock::Engine => "/knock"
 
   post 'traveler_token' => 'traveler_token#create'
+
+  post 'authenticate' => 'auth#authenticate'
 
   # resources :trips, only: [:index, :show, :create]
   resources :travelers, only: [:index, :create] do
@@ -10,7 +16,7 @@ Rails.application.routes.draw do
   resources :competitions, only: [:index, :show, :create]
 
   resources :trips, only: [:index, :show, :create]
-  
+
   # test to see if I could get all traveler info
   # resources :travelers, only: [:index, :create]
 

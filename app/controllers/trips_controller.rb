@@ -1,5 +1,5 @@
 class TripsController < ApplicationController
-  # before_action :authenticate_traveler
+  before_action :authenticate_traveler
   def index
     # return all of the trips for specific traveler
     # traveler = Traveler.find_by[params: email]
