@@ -49,6 +49,8 @@ gem 'bcrypt'
 
 gem 'knock'
 
+gem 'active_model_serializers'
+
 gem 'simplecov', :require => false, :group => :test
 
 gem 'awesome_print'

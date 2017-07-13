@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   post 'authenticate' => 'auth#authenticate'
 
   # resources :trips, only: [:index, :show, :create]
+
+  resources :travelers
+  
   resources :travelers, only: [:index, :create] do
     resources :trips, only: [:index, :show, :create]
   end
