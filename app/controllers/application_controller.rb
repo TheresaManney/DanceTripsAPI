@@ -9,8 +9,9 @@ end
 
 class ApplicationController < ActionController::API
   include Knock::Authenticable
-
   before_action :authenticate_traveler
-  # undef_method :current_traveler
-  # attr_reader: current_traveler
+
+  # def set_current_traveler
+  #   @current_traveler = current_traveler if current_traveler
+  # end
 end

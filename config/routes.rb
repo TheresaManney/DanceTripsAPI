@@ -6,23 +6,30 @@ Rails.application.routes.draw do
 
   post 'traveler_token' => 'traveler_token#create'
 
-  post 'authenticate' => 'auth#authenticate'
+  # post 'authenticate' => 'auth#authenticate'
 
   # resources :trips, only: [:index, :show, :create]
 
-  resources :travelers
-  
-  resources :travelers, only: [:index, :create] do
+  # resources :travelers
+  # resources :trips
+  # resources :competitions
+
+  resources :travelers, only: [:index, :show, :create, :update, :destroy] do
     resources :trips, only: [:index, :show, :create]
   end
 
-  resources :competitions, only: [:index, :show, :create]
+  resources :trips, only: [:index, :show, :create] do
+    resources :competitions
+  end
 
-  resources :trips, only: [:index, :show, :create]
 
-  # test to see if I could get all traveler info
-  # resources :travelers, only: [:index, :create]
+  # resources :competitions, only: [:index, :show, :create]
 
+  # resources :trips, only: [:index, :show, :create]
+
+  # resources :trips do
+  #   resources :competitions
+  # end
 
 end
 

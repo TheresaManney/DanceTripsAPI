@@ -1,5 +1,6 @@
 class CompetitionsController < ApplicationController
   before_action :authenticate_traveler
+  # before_action :set_current_traveler
   def index
     competitions = Competition.all
 

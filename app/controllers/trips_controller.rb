@@ -1,16 +1,28 @@
 class TripsController < ApplicationController
-  before_action :authenticate_traveler
+  # before_action :authenticate_traveler
+  # before_action :set_traveler
+  # before_action :set_current_traveler
+
+
+
   def index
     # return all of the trips for specific traveler
     # traveler = Traveler.find_by[params: email]
-    trips = Trip.all
+    # trips = Trip.all
+    #
+    # if trips.length >= 1
+    #   render json: trips.as_json(except: [:updated_at, :created_at]), status: :ok
+    # else
+    #   render json: { no_trips: "Trips were not found" }, status: :not_found
+    # end
 
-    if trips.length >= 1
-      render json: trips.as_json(except: [:updated_at, :created_at]), status: :ok
-    else
-      render json: { no_trips: "Trips were not found" }, status: :not_found
+    # current_traveler = Traveler.find_by_id(Traveler.to_token_payload["sub"])
+    puts "********************"
+    puts "#{current_traveler.id}"
+    if current_traveler
+      @trips = current_traveler.trips
+      render json: @trips, each_serializer: TripSerializer
     end
-
   end
 
   def show
@@ -20,6 +32,7 @@ class TripsController < ApplicationController
     else
       render json: { errors: {id: ["Trip id '#{params[:id]}' not found"]} }, status: :not_found
     end
+    # render json: @trip, serializer: TripSerializer
   end
 
   def create
@@ -33,6 +46,15 @@ class TripsController < ApplicationController
   end
 
   private
+
+  def set_current_traveler
+    @traveler = Traveler.find(params[:id])
+  end
+
+  def set_trips
+    @trip = Trip.find(params[:id])
+  end
+
   def trip_params
     params.require(:trip).permit(:location, :start_date, :end_date, :event_paid, :hotel_reserved, :flight_paid, :details, :traveler_id, :event_name)
   end

@@ -7,12 +7,15 @@ class Traveler < ApplicationRecord
 
   has_many :trips
 
-
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true, uniqueness: true
 
-  def self.from_token_payload(payload)
-    self.find payload["sub"]
+
+  def self.to_token_payload
+    {
+      sub: id,
+      email: email
+    }
   end
 end

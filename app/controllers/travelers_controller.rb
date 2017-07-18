@@ -1,9 +1,17 @@
 class TravelersController < ApplicationController
   # might not need this before action since its in the application controller
-  before_action :authenticate_traveler
+  # before_action :authenticate_traveler
+  # before_action :get_traveler
+  # before_action :set_traveler, only: [:show, :create, :update, :destroy]
 
-  before_action :set_traveler, only: [:show, :update, :destroy]
+  # skip_before_action :authenticate_traveler, only: [:create]
+  before_action :authenticate_traveler, except: [:create]
+  # before_action :set_current_traveler, except: [:create]
 
+
+  # def current
+  #   render json: current_user
+  # end
   # NOTE: (FOR AUTHENTICATING TRAVELER)
   # You can access the current traveler in your controller with current_user.
   # You also have access directly to current_traveler which will try to authenticate or return nil:
@@ -16,22 +24,23 @@ class TravelersController < ApplicationController
     #   end
 
   # this was a test
-  def index
-    # return all of the travelers
-    # travelers = Traveler.all
-    # if travelers.length >= 1
-    #   render json: travelers.as_json(except: [:updated_at, :created_at]), status: :ok
-    # else
-    #   render json: { no_travelers: "Travelers were not found" }, status: :not_found
-    # end
-
-    @travelers = Traveler.all
-    render json: @travelers, each_serializer: TravelerSerializer
-
-  end
+  # def index
+  #   # return all of the travelers
+  #   # travelers = Traveler.all
+  #   # if travelers.length >= 1
+  #   #   render json: travelers.as_json(except: [:updated_at, :created_at]), status: :ok
+  #   # else
+  #   #   render json: { no_travelers: "Travelers were not found" }, status: :not_found
+  #   # end
+  #
+  #   @travelers = Traveler.all
+  #   render json: @travelers, each_serializer: TravelerSerializer
+  #
+  # end
 
   def show
-    render json: @traveler, serializer: TravelerSerializer
+    # render json: @traveler, serializer: TravelerSerializer
+    render json: Traveler.find(current_traveler)
   end
 
   def create
@@ -57,10 +66,16 @@ class TravelersController < ApplicationController
   end
 
 
-  private
-  def set_traveler
-    @traveler = Traveler.find(params[:id])
+  def set_current_traveler
+    @current_traveler = current_traveler
   end
+  private
+
+  # def get_traveler(jwt)
+  #   decoded_token = JWT.decode jwt, Rails.application.secrets.secret_key_base, true, { :algorithm => 'HS256' }
+  #   current_traveler = Traveler.find((decoded_token[0])['sub'])
+  #   current_traveler
+  # end
 
   # allowed info to prevent bad data
   def traveler_params
