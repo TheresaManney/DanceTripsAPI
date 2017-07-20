@@ -1,11 +1,12 @@
 class TravelersController < ApplicationController
+  # require 'bcrypt'
   # might not need this before action since its in the application controller
   # before_action :authenticate_traveler
   # before_action :get_traveler
   # before_action :set_traveler, only: [:show, :create, :update, :destroy]
 
   # skip_before_action :authenticate_traveler, only: [:create]
-  before_action :authenticate_traveler, except: [:create]
+  # before_action :authenticate_traveler, except: [:create]
   # before_action :set_current_traveler, except: [:create]
 
 
@@ -24,19 +25,33 @@ class TravelersController < ApplicationController
     #   end
 
   # this was a test
-  # def index
-  #   # return all of the travelers
-  #   # travelers = Traveler.all
-  #   # if travelers.length >= 1
-  #   #   render json: travelers.as_json(except: [:updated_at, :created_at]), status: :ok
-  #   # else
-  #   #   render json: { no_travelers: "Travelers were not found" }, status: :not_found
-  #   # end
-  #
-  #   @travelers = Traveler.all
-  #   render json: @travelers, each_serializer: TravelerSerializer
-  #
-  # end
+  def index
+    # return all of the travelers
+    # travelers = Traveler.all
+    # if travelers.length >= 1
+    #   render json: travelers.as_json(except: [:updated_at, :created_at]), status: :ok
+    # else
+    #   render json: { no_travelers: "Travelers were not found" }, status: :not_found
+    # end
+
+    # @travelers = Traveler.all
+    # render json: @travelers, each_serializer: TravelerSerializer
+    puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+    puts "#{current_traveler.id}"
+    puts "#{current_traveler.first_name}"
+    puts "#{current_traveler.last_name}"
+    puts "#{current_traveler.email}"
+
+    if current_traveler
+      # current_traveler.id
+      # current_traveler.first_name
+      # current_traveler.last_name
+      # current_traveler.email
+      @travelers = Traveler.all
+
+    end
+
+  end
 
   def show
     # render json: @traveler, serializer: TravelerSerializer
@@ -45,11 +60,14 @@ class TravelersController < ApplicationController
 
   def create
     @traveler = Traveler.new(traveler_params)
+    puts "testtestttesttest"
+    puts "#{@traveler.email}"
 
     if @traveler.save
-      render status: :ok, json: {first_name: traveler.first_name}
+      # render status: :ok, json: {first_name: @traveler.first_name}
+      render json: @traveler, each_serializer: TravelerSerializer
     else
-      render status: :bad_request, json: { errors: traveler.errors.messages }
+      render status: :bad_request, json: { errors: @traveler.errors.messages }
     end
   end
 
@@ -65,21 +83,8 @@ class TravelersController < ApplicationController
     @traveler.destroy
   end
 
-
-  def set_current_traveler
-    @current_traveler = current_traveler
-  end
   private
-
-  # def get_traveler(jwt)
-  #   decoded_token = JWT.decode jwt, Rails.application.secrets.secret_key_base, true, { :algorithm => 'HS256' }
-  #   current_traveler = Traveler.find((decoded_token[0])['sub'])
-  #   current_traveler
-  # end
-
-  # allowed info to prevent bad data
   def traveler_params
-    params.require(:traveler).permit(:first_name, :last_name, :email)
+    params.require(:traveler).permit(:first_name, :last_name, :email, :password, :password_confirmation)
   end
-
 end
