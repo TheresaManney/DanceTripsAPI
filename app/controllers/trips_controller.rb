@@ -36,16 +36,28 @@ class TripsController < ApplicationController
   end
 
   def create
-    if current_traveler
+
+    # logger.debug "================="
+
+
+    # if current_traveler
       trip = Trip.new(trip_params)
-      trip.traveler_id = current_traveler.id
+      # trip.traveler_id = current_traveler.id
+      logger.debug "================="
       puts "#{trip}"
+      logger.debug "================="
+      logger.debug "================="
+      trip.validate
+      puts trip.errors.messages
       if trip.save
+
+        logger.debug "worked"
         render status: :ok, json: { location: trip.location }
       else
+        logger.debug "fail #{trip.errors.messages}"
         render status: :bad_request, json: { errors: trip.errors.messages }
       end
-    end
+    # end
   end
 
   def update

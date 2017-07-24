@@ -1,5 +1,5 @@
 class TravelerSerializer < ApplicationSerializer
-  attributes :id, :first_name, :last_name, :password, :password_confirmation#, :password_digest#, :show
+  attributes :id, :first_name, :last_name, :email, :password, :password_confirmation#, :password_digest#, :show
   attribute :email
   has_many :trips
 

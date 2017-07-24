@@ -1,4 +1,6 @@
 class TravelersController < ApplicationController
+  before_action :authenticate_traveler, except: [:create]
+
   # require 'bcrypt'
   # might not need this before action since its in the application controller
   # before_action :authenticate_traveler
@@ -42,15 +44,18 @@ class TravelersController < ApplicationController
     puts "#{current_traveler.last_name}"
     puts "#{current_traveler.email}"
 
-    if current_traveler
-      # current_traveler.id
-      # current_traveler.first_name
-      # current_traveler.last_name
-      # current_traveler.email
-      @travelers = Traveler.all
-
-    end
-
+    # if current_traveler
+    #   # current_traveler.id
+    #   # current_traveler.first_name
+    #   # current_traveler.last_name
+    #   # current_traveler.email
+    #   @travelers = Traveler.all
+    #   render json: @travelers, each_serializer: TravelerSerializer
+    #
+    #
+    # end
+    data = Traveler.find(current_traveler)
+    render status: :ok, json: data
   end
 
   def show
@@ -59,15 +64,15 @@ class TravelersController < ApplicationController
   end
 
   def create
-    @traveler = Traveler.new(traveler_params)
+    traveler = Traveler.new(traveler_params)
     puts "testtestttesttest"
-    puts "#{@traveler.email}"
+    puts "#{traveler.email}"
 
-    if @traveler.save
+    if traveler.save
       # render status: :ok, json: {first_name: @traveler.first_name}
-      render json: @traveler, each_serializer: TravelerSerializer
+      render json: traveler, each_serializer: TravelerSerializer
     else
-      render status: :bad_request, json: { errors: @traveler.errors.messages }
+      render status: :bad_request, json: { errors: traveler.errors.messages }
     end
   end
 
