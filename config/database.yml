@@ -80,7 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: SwingTripsAPI_production
-  username: SwingTripsAPI
-  password: <%= ENV['SWINGTRIPSAPI_DATABASE_PASSWORD'] %>
-  # host: <%= ENV['SWINGTRIPSAPI_HOST']%>
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME']%>
