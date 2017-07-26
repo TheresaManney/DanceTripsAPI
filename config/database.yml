@@ -83,3 +83,4 @@ production:
   database: SwingTripsAPI_production
   username: SwingTripsAPI
   password: <%= ENV['SWINGTRIPSAPI_DATABASE_PASSWORD'] %>
+  # host: <%= ENV['SWINGTRIPSAPI_HOST']%>
